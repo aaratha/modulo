@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjqsyc8lt42ks"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0rbrd"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0rbrd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 323)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 521.0
+offset_top = 570.0
+offset_right = 636.0
+offset_bottom = 601.0
+text = "Add Module +"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjqsyc8lt42ks"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0rbrd"]
+[ext_resource type="PackedScene" uid="uid://uif5l5p67rxd" path="res://scenes/module.tscn" id="1_er02x"]
+
+[node name="Main" type="GraphEdit"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0rbrd")
+
+[node name="Module" parent="." instance=ExtResource("1_er02x")]
+layout_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 323)

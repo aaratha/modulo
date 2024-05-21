@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://uif5l5p67rxd"]
+
+[ext_resource type="Script" path="res://scripts/module.gd" id="1_waj4c"]
+
+[node name="Module" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_waj4c")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 149.0
+offset_bottom = 214.0
+mouse_filter = 1
+
+[node name="in" type="Button" parent="." groups=["ports"]]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 158.0
+offset_right = 46.0
+offset_bottom = 178.0
+
+[node name="out" type="Button" parent="." groups=["ports"]]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 158.0
+offset_right = 124.0
+offset_bottom = 178.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 149.0
+offset_bottom = 40.0
+text = "Basic Module"

@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjqsyc8lt42ks"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0rbrd"]
+[ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="2_c6b14"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_d2xao"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -563.0
+offset_bottom = -1000.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0rbrd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 323)
+offset = Vector2(-295.115, 176.975)
+
+[node name="add_module" type="Button" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 913.0
+offset_right = 269.0
+offset_bottom = 944.0
+text = "Add Module +"
+
+[node name="add_oscillator" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 913.0
+offset_right = 418.0
+offset_bottom = 944.0
+text = "Add Oscillator +"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamGenerator_d2xao")
+script = ExtResource("2_c6b14")
+
+[node name="send" type="Button" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 58.0
+offset_right = 455.0
+offset_bottom = 83.0
+
+[node name="receive" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 914.0
+offset_right = 102.0
+offset_bottom = 941.0
+
+[connection signal="pressed" from="add_module" to="." method="_on_add_module_pressed"]
+[connection signal="pressed" from="add_oscillator" to="." method="_on_add_oscillator_pressed"]
+[connection signal="pressed" from="add_oscillator" to="." method="_on_button_pressed"]
